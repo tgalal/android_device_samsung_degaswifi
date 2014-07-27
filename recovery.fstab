@@ -25,14 +25,13 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# <src>                                      <mnt_point>  	<type>  <mnt_flags and options>                     <fs_mgr_flags>
-/dev/block/platform/soc.2/by-name/EFS		/efs        		ext4		default		recoveryonly
-/dev/block/platform/soc.2/by-name/KERNEL		/boot		emmc	default		recoveryonly
-/dev/block/platform/soc.2/by-name/RECOVERY		/recovery  	emmc	default		recoveryonly
-/dev/block/platform/soc.2/by-name/CACHE		/cache      	ext4		default		recoveryonly
-/dev/block/platform/soc.2/by-name/SYSTEM		/system     	ext4		default		recoveryonly
-/dev/block/platform/soc.2/by-name/USER		/data		ext4		default	 	wait,length=-16384
-/dev/block/platform/soc.2/by-name/HIDDEN		/preload		ext4		default		recoveryonly
-/dev/block/platform/soc.2/by-name/NVM		/nvm		ext4		default		recoveryonly
-/dev/block/platform/soc.2/by-name/MODEM		/radio		emmc		default		recoveryonly
-/dev/block/mmcblk1p1		/sdcard		vfat		default		recoveryonly
+/efs                    ext4    /dev/block/platform/soc.2/by-name/EFS
+/boot                   emmc    /dev/block/platform/soc.2/by-name/KERNEL
+/recovery               emmc    /dev/block/platform/soc.2/by-name/RECOVERY
+/cache                  ext4    /dev/block/platform/soc.2/by-name/CACHE
+/system                 ext4    /dev/block/platform/soc.2/by-name/SYSTEM
+/data                   ext4    /dev/block/platform/soc.2/by-name/USER
+/preload                ext4    /dev/block/platform/soc.2/by-name/HIDDEN
+/nvm                    ext4    /dev/block/platform/soc.2/by-name/NVM
+/radio                  emmc    /dev/block/platform/soc.2/by-name/MODEM 
+/sdcard                 vfat    /dev/block/mmcblk1p1

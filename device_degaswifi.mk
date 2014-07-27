@@ -14,6 +14,13 @@ else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
+DEFAULT_PROPERTY_OVERRIDES += \
+    ro.secure=0 \
+    ro.allow.mock.location=1 \
+    ro.debuggable=1 \
+    persist.service.adb.enable=1 \
+    persist.sys.usb.config=mtp,adb 
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
