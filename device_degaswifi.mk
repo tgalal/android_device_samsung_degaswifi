@@ -21,8 +21,8 @@ DEFAULT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1 \
     persist.sys.usb.config=mtp,adb 
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_KERNEL):kernel
 
 $(call inherit-product, build/target/product/full.mk)
 
